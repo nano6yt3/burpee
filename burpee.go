@@ -2,13 +2,13 @@ package main
 
 import (
   	"flag"
-	  "fmt"
-	  "log"
-	  "os"
-	  "bufio"
-    "net/http"
-    "net/url"
-    "crypto/tls"
+	"fmt"
+	"log"
+	"os"
+	"bufio"
+        "net/http"
+        "net/url"
+        "crypto/tls"
 	)
 
 const usage = `
@@ -34,7 +34,7 @@ func main(){
         panic(err)
     }
    http.DefaultTransport = &http.Transport{Proxy: http.ProxyURL(proxyUrl),
-   										   TLSClientConfig: &tls.Config{InsecureSkipVerify : true},
+   					   TLSClientConfig: &tls.Config{InsecureSkipVerify : true},
                             }
 
    // open a file
